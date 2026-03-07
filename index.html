@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="headerIconShow">
+        <span id="ShowStatusIcon">
+           <i class="fa-solid fa-sun"></i>
+        </span>
+    </div>
+    <div class="container">
+        <div class="showWeather">
+            <div class="WeatherHeader">
+                <div class="searchCountry">
+                    <div class="searchInput">
+                        <input type="text" id="SearchCountryInput" placeholder="Search Country...">
+                        <button id="SearchCountryBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="WetherMain">
+                <div class="showDayInfo">
+                    <p id="ShowDayInfoData">May 05 2024</p>
+                </div>
+                <div class="mainContent">
+                    <div id="showCountry">Bangladesh</div>
+                    <div class="showIconsAndOther">
+                        <div id="icon">
+                            <img id="IconImage" src="http://openweathermap.org/img/wn/01d@2x.png" alt="">
+                        </div>
+                        <div id="wetherType">CLOUDES</div>
+                        <div id="showCelcius">11˚C</div>
+                    </div>
+                </div>
+            </div>
+            <div class="WeatherFooter">
+                <div class="WeathersFooterData">
+                    <div class="WeatherFooterDataRow1">
+                        <div class="showWeatherData1 dataRow">
+                            <p class="showTypeText">HIGHS</p>
+                            <p id="ShowHighCel" class="valueData">11˚C</p>
+                        </div>
+                        <div class="showWeatherData2 dataRow">
+                            <p class="showTypeText">LOWS</p>
+                            <p id="ShowLowCel" class="valueData">1˚C</p>
+                        </div>
+                    </div>
+                    <div class="WeatherFooterDataRow2">
+                        <div class="weatherDataRow2Data1 dataRow">
+                            <p class="showTypeText"><i class="fa-solid fa-wind"></i></p>
+                            <p id="ShowWind" class="valueData">0.0 km/p</p>
+                        </div>
+                        <div class="weatherDataRow2Data2 dataRow">
+                            <p class="showTypeText"><i class="fa-solid fa-prescription-bottle"></i></p>
+                            <p id="pressureData" class="valueData">13</p>
+                        </div>
+                        <div class="weatherDataRow2Data3 dataRow">
+                            <p class="showTypeText"><i class="fa-regular fa-eye"></i></p>
+                            <p id="visibilityDataShow" class="valueData">1000</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="loadingbar" class="hideLoader">
+                <div class="loaderMain">
+                    <div class="loader"></div>
+                </div>
+                <p class="loadingText">Fetching Weather....</p>
+            </div>
+            <div class="errorHandler">
+
+            </div>
+        </div>
+    </div>
+    <script type="module" src="app.js"></script>
+</body>
+</html>
