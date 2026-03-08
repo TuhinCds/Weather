@@ -8,13 +8,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div class="headerIconShow">
-        <span id="ShowStatusIcon">
-           <i class="fa-solid fa-sun"></i>
-        </span>
-    </div>
+    <div id="overly"></div>
     <div class="container">
         <div class="showWeather">
+            <div class="headerIconShow">
+                <span id="ShowStatusIcon">
+                    <i class="fa-solid fa-sun"></i>
+                </span>
+            </div>
             <div class="WeatherHeader">
                 <div class="searchCountry">
                     <div class="searchInput">
@@ -33,8 +34,8 @@
                         <div id="icon">
                             <img id="IconImage" src="http://openweathermap.org/img/wn/01d@2x.png" alt="">
                         </div>
-                        <div id="wetherType">CLOUDES</div>
-                        <div id="showCelcius">11˚C</div>
+                        <div id="wetherType">-----</div>
+                        <div id="showCelcius">00˚C</div>
                     </div>
                 </div>
             </div>
@@ -43,11 +44,11 @@
                     <div class="WeatherFooterDataRow1">
                         <div class="showWeatherData1 dataRow">
                             <p class="showTypeText">HIGHS</p>
-                            <p id="ShowHighCel" class="valueData">11˚C</p>
+                            <p id="ShowHighCel" class="valueData">00˚C</p>
                         </div>
                         <div class="showWeatherData2 dataRow">
                             <p class="showTypeText">LOWS</p>
-                            <p id="ShowLowCel" class="valueData">1˚C</p>
+                            <p id="ShowLowCel" class="valueData">0˚C</p>
                         </div>
                     </div>
                     <div class="WeatherFooterDataRow2">
@@ -57,11 +58,11 @@
                         </div>
                         <div class="weatherDataRow2Data2 dataRow">
                             <p class="showTypeText"><i class="fa-solid fa-prescription-bottle"></i></p>
-                            <p id="pressureData" class="valueData">13</p>
+                            <p id="pressureData" class="valueData">0</p>
                         </div>
                         <div class="weatherDataRow2Data3 dataRow">
                             <p class="showTypeText"><i class="fa-regular fa-eye"></i></p>
-                            <p id="visibilityDataShow" class="valueData">1000</p>
+                            <p id="visibilityDataShow" class="valueData">0 km</p>
                         </div>
                     </div>
                 </div>
@@ -72,9 +73,38 @@
                 </div>
                 <p class="loadingText">Fetching Weather....</p>
             </div>
-            <div class="errorHandler">
+                <div class="errorHandler">
 
-            </div>
+                </div>
+                <div id="ShowFullCountryNameContainer" class="hideAnimate0">
+                    <div id="showFullCountryName">
+                        <div class="showFullInfoHeader">
+                            <div class="showFullInfoHeaderBtns">
+                                <div class="AllBtnsGroups">
+                                    <button><i class="fa-solid fa-person"></i> hPa</button>
+                                    <div class="border-h1"></div>
+                                    <button><i class="fa-solid fa-cloud"></i></button>
+                                    <div class="border-h1"></div>
+                                    <button id="SearchInGoogle" class="active"><i class="fa-brands fa-google"></i></button>
+                                </div>
+                                <div class="rightBtnsGroup">
+                                    <button id="LanguageChangebtn" class="active"><i class="fa-solid fa-language"></i></button>
+                                    <button id="OpenAiResopnseBtn"><i class="fa-brands fa-openai"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="showFullInfoMain">
+                            <div class="slide1">
+                                <div class="slider1Wraper" id="ShowCityDataSlide">
+                                    
+                                </div>
+                            </div>
+                            <div class="slide2"></div>
+                            <div class="slide3"></div>
+                        </div>
+                        <div class="showFullInfoFooter"></div>
+                    </div>
+                </div>
         </div>
     </div>
     <script type="module" src="app.js"></script>
